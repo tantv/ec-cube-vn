@@ -6,8 +6,8 @@
   }
 
   &.is-active {
-    .ec-cartNaviIsset,
-    .ec-cartNaviNull {
+    .os-cartNaviIsset,
+    .os-cartNaviNull {
       display: block;
 
       @include media-breakpoint-down(sm) {
@@ -42,7 +42,7 @@
   }
 }
 
-.ec-cartNavi {
+.os-cartNavi {
   align-items: center;
   background: $light;
   border-radius: $rounded-pill;
@@ -62,8 +62,8 @@
   }
 }
 
-.ec-cartNaviIsset,
-.ec-cartNaviNull {
+.os-cartNaviIsset,
+.os-cartNaviNull {
   @include position(absolute, null 0 null null);
   background: $light;
   display: none;

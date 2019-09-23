@@ -13,42 +13,42 @@ file that was distributed with this source code.
 {% form_theme form 'Form/form_div_layout.twig' %}
 
 {% block main %}
-    <div class="ec-registerRole">
-        <div class="ec-pageHeader">
+    <div class="ec-registerRole os-registerRole">
+        <div class="ec-pageHeader os-pageHeader">
             <h1>{{ 'front.forgot.reset_title'|trans }}</h1>
         </div>
-        <div class="ec-off1Grid">
-            <div class="ec-off1Grid__cell">
+        <div class="os-off1Grid">
+            <div class="os-off1Grid__cell">
                 <form id="form1" method="post" novalidate>
                     {{ form_widget(form._token) }}
-                    <div class="ec-borderedDefs">
+                    <div class="ec-borderedDefs os-borderedDefs">
                         <dl>
                             <dt>
-                                {{ form_label(form.login_email, 'common.mail_address', { 'label_attr': { 'class': 'ec-label' }}) }}
+                                {{ form_label(form.login_email, 'common.mail_address', { 'label_attr': { 'class': 'os-label' }}) }}
                             </dt>
                             <dd>
-                                <div class="ec-input{{ has_errors(form.login_email) ? ' error' }}">
+                                <div class="os-input{{ has_errors(form.login_email) ? ' error' }}">
                                     {{ form_widget(form.login_email) }}
                                     {{ form_errors(form.login_email) }}
                                     {% if error %}
-                                        <p class="ec-errorMessage">{{ error }}</p>
+                                        <p class="ec-errorMessage os-errorMessage">{{ error }}</p>
                                     {% endif %}
                                 </div>
                             </dd>
                         </dl>
                         <dl>
                             <dt>
-                                {{ form_label(form.password, 'common.password', { 'label_attr': {'class': 'ec-label' }}) }}
+                                {{ form_label(form.password, 'common.password', { 'label_attr': {'class': 'os-label' }}) }}
                             </dt>
                             <dd>
-                                <div class="ec-input{{ has_errors(form.password.first) ? ' error' }}">
+                                <div class="os-input{{ has_errors(form.password.first) ? ' error' }}">
                                     {{ form_widget(form.password.first, {
                                         'attr': { 'placeholder': 'common.password_sample'|trans({ '%min%': eccube_config.eccube_password_min_len, '%max%': eccube_config.eccube_password_max_len }) },
                                         'type': 'password'
                                     }) }}
                                     {{ form_errors(form.password.first) }}
                                 </div>
-                                <div class="ec-input{{ has_errors(form.password.second) ? ' error' }}">
+                                <div class="os-input{{ has_errors(form.password.second) ? ' error' }}">
                                     {{ form_widget(form.password.second, {
                                         'attr': { 'placeholder': 'common.repeated_confirm'|trans },
                                         'type': 'password'
@@ -59,10 +59,10 @@ file that was distributed with this source code.
                         </dl>
                         </dl>
                     </div>
-                    <div class="ec-registerRole__actions">
-                        <div class="ec-off4Grid">
-                            <div class="ec-off4Grid__cell">
-                                <button class="ec-blockBtn--action" type="submit">{{ 'common.registration'|trans }}</button>
+                    <div class="ec-registerRole__actions os-registerRole__actions">
+                        <div class="ec-off4Grid os-off4Grid">
+                            <div class="ec-off4Grid__cell os-off4Grid__cell">
+                                <button class="ec-blockBtn--action os-blockBtn--action" type="submit">{{ 'common.registration'|trans }}</button>
                             </div>
                         </div>
                     </div>

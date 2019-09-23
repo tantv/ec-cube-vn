@@ -1,4 +1,4 @@
-.ec-progress{
+.os-progress{
   margin: 0 auto;
   padding: 8px 0 16px;
   display: table;
@@ -61,10 +61,10 @@
     font-size: 12px;
   }
   .is-complete {
-    .ec-progress__number {
+    .os-progress__number {
       background: #5CB1B1;
     }
-    .ec-progress__label {
+    .os-progress__label {
       color: #5CB1B1;
     }
   }

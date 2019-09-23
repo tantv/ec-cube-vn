@@ -89,11 +89,11 @@
                 }).done(function(data) {
                     // レスポンス内のメッセージをalertで表示
                     $.each(data.messages, function() {
-                        $('#ecModalLabel').html(this);
+                        $('#osModalLabel').html(this);
                     });
 
                     // Open modal
-                    $('#eccube-modal').modal('show');
+                    $('#os-modal').modal('show');
                     
                     // カートブロックを更新する
                     $.ajax({
@@ -121,7 +121,7 @@
             {% include "Components/product/pdp-images.twig" with {'product': Product} %}
         </div>
         <div id="product-informations" class="col-12 col-md-6">
-            <div class="ec-productRole__profile">
+            <div class="ec-productRole__profile os-productRole__profile">
                 {# Name #}
                 {% include "Components/product/name.twig" with {'product': Product, type: 'text', class: 'pdp-product-name'} %}
                 

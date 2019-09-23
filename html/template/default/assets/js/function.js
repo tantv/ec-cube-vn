@@ -64,17 +64,17 @@ $(function() {
 
     $('.is_inDrawer').each(function () {
         const html = $(this).html();
-        $(html).appendTo('.ec-drawerRole');
+        $(html).appendTo('.os-drawerRole');
     });
     // End Hamburger Menu
 
     // MINI CART
     const $miniCartWrapper = $('.mini-cart-wrapper');
-    $miniCartWrapper.on('click', '.ec-cartNavi', () => {
+    $miniCartWrapper.on('click', '.os-cartNavi', () => {
         $miniCartWrapper.toggleClass('is-active');
     });
 
-    $miniCartWrapper.on('click', '.ec-cartNavi--cancel', () => {
+    $miniCartWrapper.on('click', '.os-cartNavi--cancel', () => {
         $miniCartWrapper.toggleClass('is-active');
     });
 

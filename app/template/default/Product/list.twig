@@ -53,11 +53,11 @@
                 }).done(function(data) {
                     // レスポンス内のメッセージをalertで表示
                     $.each(data.messages, function() {
-                        $('#ecModalLabel').html(this);
+                        $('#osModalLabel').html(this);
                     });
 
                     // Open modal
-                    $('#eccube-modal').modal('show');
+                    $('#os-modal').modal('show');
                     
                     // カートブロックを更新する
                     $.ajax({

@@ -112,7 +112,7 @@
                     </div>
                 {% endfor %}
                         
-                <div id="eccube-cart-promotion" class="ec-cart-promotion">
+                <div id="os-cart-promotion" class="os-cart-promotion">
                     {% if BaseInfo.delivery_free_amount and BaseInfo.delivery_free_quantity %}
                         {% if is_delivery_free[cartKey] %}
                             <div class="alert alert-info text-center mb-0 mt-4" role="alert">
@@ -145,7 +145,7 @@
                         {% endif %}
                     {% endif %}
                 </div>
-                <div id="eccube-cart-total" class="row d-flex justify-content-end">
+                <div id="os-cart-total" class="row d-flex justify-content-end">
                     <div class="col-md-4">
                         <div class="cart-total pt-4 pb-2 d-flex justify-content-between align-items-center">
                             <b>{{ 'common.total__with_separator'|trans }}</b>

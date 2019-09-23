@@ -1,8 +1,8 @@
-.eccube-header {
+.os-header {
   @extend .mb-3;
 }
 
-.eccube-top-header {
+.os-top-header {
   font-size: remCalc(14px);
 
   @include media-breakpoint-down(sm) {
@@ -50,7 +50,7 @@
 }
 
 /* NAVIGATION */
-.eccube-header-nav {
+.os-header-nav {
   a {
     padding-left: remCalc(6px);
     padding-right: remCalc(6px);
@@ -94,7 +94,7 @@
   right: 20px;  
 }
 
-.ec-drawerRole {
+.os-drawerRole {
   @include position(fixed, 0 null null 0, 21);
   background: black;
   display: none;
@@ -104,7 +104,7 @@
   width: calc(100% - 80px);
 }
 
-.eccube-overlay {
+.os-overlay {
   @include size(100% 100vh);
   @include position(fixed, 0 null null 0, 20);
   background: rgba(0, 0, 0, 0.5);
@@ -113,8 +113,8 @@
 
 .have_curtain {
   .hamburger-menu-close,
-  .ec-drawerRole,
-  .eccube-overlay {
+  .os-drawerRole,
+  .os-overlay {
     display: block;
 
     @include media-breakpoint-up(md) {

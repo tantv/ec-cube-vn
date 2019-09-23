@@ -1638,7 +1638,7 @@ textarea.form-control {
   border-color: #28a745;
   box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25); }
 
-.invalid-feedback, .ec-errorMessage, .ec-required {
+.invalid-feedback, .os-errorMessage, .ec-required {
   display: none;
   width: 100%;
   margin-top: 4px;
@@ -1673,8 +1673,8 @@ textarea.form-control {
   .was-validated .form-control:invalid:focus, .form-control.is-invalid:focus, .is-invalid .form-control:focus {
     border-color: #dc3545;
     box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25); }
-  .was-validated .form-control:invalid ~ .invalid-feedback, .was-validated .form-control:invalid ~ .ec-errorMessage, .was-validated .form-control:invalid ~ .ec-required,
-  .was-validated .form-control:invalid ~ .invalid-tooltip, .form-control.is-invalid ~ .invalid-feedback, .is-invalid .form-control ~ .invalid-feedback, .form-control.is-invalid ~ .ec-errorMessage, .is-invalid .form-control ~ .ec-errorMessage, .form-control.is-invalid ~ .ec-required, .is-invalid .form-control ~ .ec-required,
+  .was-validated .form-control:invalid ~ .invalid-feedback, .was-validated .form-control:invalid ~ .os-errorMessage, .was-validated .form-control:invalid ~ .ec-required,
+  .was-validated .form-control:invalid ~ .invalid-tooltip, .form-control.is-invalid ~ .invalid-feedback, .is-invalid .form-control ~ .invalid-feedback, .form-control.is-invalid ~ .os-errorMessage, .is-invalid .form-control ~ .os-errorMessage, .form-control.is-invalid ~ .ec-required, .is-invalid .form-control ~ .ec-required,
   .form-control.is-invalid ~ .invalid-tooltip,
   .is-invalid .form-control ~ .invalid-tooltip {
     display: block; }
@@ -1690,23 +1690,23 @@ textarea.form-control {
   .was-validated .custom-select:invalid:focus, .was-validated select:invalid:focus, .custom-select.is-invalid:focus, select.is-invalid:focus {
     border-color: #dc3545;
     box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25); }
-  .was-validated .custom-select:invalid ~ .invalid-feedback, .was-validated select:invalid ~ .invalid-feedback, .was-validated .custom-select:invalid ~ .ec-errorMessage, .was-validated select:invalid ~ .ec-errorMessage, .was-validated .custom-select:invalid ~ .ec-required, .was-validated select:invalid ~ .ec-required,
+  .was-validated .custom-select:invalid ~ .invalid-feedback, .was-validated select:invalid ~ .invalid-feedback, .was-validated .custom-select:invalid ~ .os-errorMessage, .was-validated select:invalid ~ .os-errorMessage, .was-validated .custom-select:invalid ~ .ec-required, .was-validated select:invalid ~ .ec-required,
   .was-validated .custom-select:invalid ~ .invalid-tooltip,
-  .was-validated select:invalid ~ .invalid-tooltip, .custom-select.is-invalid ~ .invalid-feedback, select.is-invalid ~ .invalid-feedback, .custom-select.is-invalid ~ .ec-errorMessage, select.is-invalid ~ .ec-errorMessage, .custom-select.is-invalid ~ .ec-required, select.is-invalid ~ .ec-required,
+  .was-validated select:invalid ~ .invalid-tooltip, .custom-select.is-invalid ~ .invalid-feedback, select.is-invalid ~ .invalid-feedback, .custom-select.is-invalid ~ .os-errorMessage, select.is-invalid ~ .os-errorMessage, .custom-select.is-invalid ~ .ec-required, select.is-invalid ~ .ec-required,
   .custom-select.is-invalid ~ .invalid-tooltip,
   select.is-invalid ~ .invalid-tooltip {
     display: block; }
 
-.was-validated .form-control-file:invalid ~ .invalid-feedback, .was-validated .form-control-file:invalid ~ .ec-errorMessage, .was-validated .form-control-file:invalid ~ .ec-required,
-.was-validated .form-control-file:invalid ~ .invalid-tooltip, .form-control-file.is-invalid ~ .invalid-feedback, .form-control-file.is-invalid ~ .ec-errorMessage, .form-control-file.is-invalid ~ .ec-required,
+.was-validated .form-control-file:invalid ~ .invalid-feedback, .was-validated .form-control-file:invalid ~ .os-errorMessage, .was-validated .form-control-file:invalid ~ .ec-required,
+.was-validated .form-control-file:invalid ~ .invalid-tooltip, .form-control-file.is-invalid ~ .invalid-feedback, .form-control-file.is-invalid ~ .os-errorMessage, .form-control-file.is-invalid ~ .ec-required,
 .form-control-file.is-invalid ~ .invalid-tooltip {
   display: block; }
 
 .was-validated .form-check-input:invalid ~ .form-check-label, .form-check-input.is-invalid ~ .form-check-label {
   color: #dc3545; }
 
-.was-validated .form-check-input:invalid ~ .invalid-feedback, .was-validated .form-check-input:invalid ~ .ec-errorMessage, .was-validated .form-check-input:invalid ~ .ec-required,
-.was-validated .form-check-input:invalid ~ .invalid-tooltip, .form-check-input.is-invalid ~ .invalid-feedback, .form-check-input.is-invalid ~ .ec-errorMessage, .form-check-input.is-invalid ~ .ec-required,
+.was-validated .form-check-input:invalid ~ .invalid-feedback, .was-validated .form-check-input:invalid ~ .os-errorMessage, .was-validated .form-check-input:invalid ~ .ec-required,
+.was-validated .form-check-input:invalid ~ .invalid-tooltip, .form-check-input.is-invalid ~ .invalid-feedback, .form-check-input.is-invalid ~ .os-errorMessage, .form-check-input.is-invalid ~ .ec-required,
 .form-check-input.is-invalid ~ .invalid-tooltip {
   display: block; }
 
@@ -1715,8 +1715,8 @@ textarea.form-control {
   .was-validated .custom-control-input:invalid ~ .custom-control-label:before, .custom-control-input.is-invalid ~ .custom-control-label:before {
     border-color: #dc3545; }
 
-.was-validated .custom-control-input:invalid ~ .invalid-feedback, .was-validated .custom-control-input:invalid ~ .ec-errorMessage, .was-validated .custom-control-input:invalid ~ .ec-required,
-.was-validated .custom-control-input:invalid ~ .invalid-tooltip, .custom-control-input.is-invalid ~ .invalid-feedback, .custom-control-input.is-invalid ~ .ec-errorMessage, .custom-control-input.is-invalid ~ .ec-required,
+.was-validated .custom-control-input:invalid ~ .invalid-feedback, .was-validated .custom-control-input:invalid ~ .os-errorMessage, .was-validated .custom-control-input:invalid ~ .ec-required,
+.was-validated .custom-control-input:invalid ~ .invalid-tooltip, .custom-control-input.is-invalid ~ .invalid-feedback, .custom-control-input.is-invalid ~ .os-errorMessage, .custom-control-input.is-invalid ~ .ec-required,
 .custom-control-input.is-invalid ~ .invalid-tooltip {
   display: block; }
 
@@ -1733,8 +1733,8 @@ textarea.form-control {
 .was-validated .custom-file-input:invalid ~ .custom-file-label, .custom-file-input.is-invalid ~ .custom-file-label {
   border-color: #dc3545; }
 
-.was-validated .custom-file-input:invalid ~ .invalid-feedback, .was-validated .custom-file-input:invalid ~ .ec-errorMessage, .was-validated .custom-file-input:invalid ~ .ec-required,
-.was-validated .custom-file-input:invalid ~ .invalid-tooltip, .custom-file-input.is-invalid ~ .invalid-feedback, .custom-file-input.is-invalid ~ .ec-errorMessage, .custom-file-input.is-invalid ~ .ec-required,
+.was-validated .custom-file-input:invalid ~ .invalid-feedback, .was-validated .custom-file-input:invalid ~ .os-errorMessage, .was-validated .custom-file-input:invalid ~ .ec-required,
+.was-validated .custom-file-input:invalid ~ .invalid-tooltip, .custom-file-input.is-invalid ~ .invalid-feedback, .custom-file-input.is-invalid ~ .os-errorMessage, .custom-file-input.is-invalid ~ .ec-required,
 .custom-file-input.is-invalid ~ .invalid-tooltip {
   display: block; }
 
@@ -5202,7 +5202,7 @@ button.bg-dark:focus {
 .mx-0 {
   margin-right: 0 !important; }
 
-.mb-0, .front_page .eccube-header,
+.mb-0, .front_page .os-header,
 .my-0 {
   margin-bottom: 0 !important; }
 
@@ -5272,7 +5272,7 @@ button.bg-dark:focus {
   margin-right: 16px !important;
   margin-right: 1rem !important; }
 
-.mb-3, .eccube-header,
+.mb-3, .os-header,
 .my-3 {
   margin-bottom: 16px !important;
   margin-bottom: 1rem !important; }
@@ -5908,7 +5908,7 @@ select {
   select.form-control {
     padding-right: 35px; }
 
-.ec-errorMessage {
+.os-errorMessage {
   display: block; }
 
 .ec-required {
@@ -5923,21 +5923,21 @@ img.product-thumb {
 img.product-small {
   max-width: 90px; }
 
-.ec-progress {
+.os-progress {
   margin: 0 auto;
   padding: 8px 0 16px;
   display: table;
   table-layout: fixed;
   width: 100%;
   list-style: none; }
-  .ec-progress .ec-progress__item {
+  .os-progress .os-progress__item {
     display: table-cell;
     position: relative;
     font-size: 14px;
     text-align: center;
     font-weight: bold;
     z-index: 10; }
-    .ec-progress .ec-progress__item:after {
+    .os-progress .os-progress__item:after {
       content: '';
       position: absolute;
       display: block;
@@ -5948,9 +5948,9 @@ img.product-small {
       left: 50%;
       margin-left: 1.5em\9;
       z-index: -1; }
-    .ec-progress .ec-progress__item:last-child:after {
+    .os-progress .os-progress__item:last-child:after {
       display: none; }
-  .ec-progress .ec-progress__number {
+  .os-progress .os-progress__number {
     line-height: 30px;
     width: 30px;
     height: 30px;
@@ -5964,11 +5964,11 @@ img.product-small {
     text-align: center;
     vertical-align: middle;
     border-radius: 50%; }
-  .ec-progress .ec-progress__label {
+  .os-progress .os-progress__label {
     font-size: 12px; }
-  .ec-progress .is-complete .ec-progress__number {
+  .os-progress .is-complete .os-progress__number {
     background: #5CB1B1; }
-  .ec-progress .is-complete .ec-progress__label {
+  .os-progress .is-complete .os-progress__label {
     color: #5CB1B1; }
 
 .pagetop {
@@ -5989,7 +5989,7 @@ img.product-small {
   padding: 0 0.9375rem;
   text-align: center; }
 
-.ec-navlistRole .ec-navlistRole__navlist {
+.os-navlistRole .os-navlistRole__navlist {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
@@ -6001,21 +6001,21 @@ img.product-small {
   padding: 0;
   list-style: none; }
 
-.ec-navlistRole .ec-navlistRole__item {
+.os-navlistRole .os-navlistRole__item {
   width: 50%;
   border-color: #D0D0D0;
   border-style: solid;
   border-width: 0 1px 1px 0;
   text-align: center;
   font-weight: bold; }
-  .ec-navlistRole .ec-navlistRole__item a {
+  .os-navlistRole .os-navlistRole__item a {
     padding: 16px;
     width: 100%;
     display: inline-block; }
-    .ec-navlistRole .ec-navlistRole__item a:hover {
+    .os-navlistRole .os-navlistRole__item a:hover {
       background: #f5f7f8; }
 
-.ec-navlistRole .active a {
+.os-navlistRole .active a {
   color: #DE5D50; }
 
 .main_visual.slick-slider {
@@ -6062,12 +6062,12 @@ img.product-small {
   font-size: 1.75rem;
   color: #dc3545; }
 
-.eccube-footer {
+.os-footer {
   background: #343a40;
   color: #fff; }
-  .eccube-footer a {
+  .os-footer a {
     color: #fff; }
-    .eccube-footer a:hover {
+    .os-footer a:hover {
       color: #fff; }
 
 .footer-links {
@@ -6090,8 +6090,8 @@ img.product-small {
 
 .mini-cart-wrapper {
   display: inline-block; }
-  .mini-cart-wrapper.is-active .ec-cartNaviIsset,
-  .mini-cart-wrapper.is-active .ec-cartNaviNull {
+  .mini-cart-wrapper.is-active .os-cartNaviIsset,
+  .mini-cart-wrapper.is-active .os-cartNaviNull {
     display: block; }
 
 .mini-count {
@@ -6119,7 +6119,7 @@ img.product-small {
   .mini-product-options span {
     display: block; }
 
-.ec-cartNavi {
+.os-cartNavi {
   -ms-flex-align: center;
       align-items: center;
   background: #f8f9fa;
@@ -6134,8 +6134,8 @@ img.product-small {
   padding: 8px 15px 8px 10px;
   padding: 0.5rem 0.9375rem 0.5rem 0.625rem; }
 
-.ec-cartNaviIsset,
-.ec-cartNaviNull {
+.os-cartNaviIsset,
+.os-cartNaviNull {
   position: absolute;
   z-index: 1;
   right: 0;
@@ -6147,12 +6147,12 @@ img.product-small {
   width: 100vw;
   z-index: 20; }
 
-.eccube-top-header {
+.os-top-header {
   font-size: 14px;
   font-size: 0.875rem; }
-  .eccube-top-header input,
-  .eccube-top-header select,
-  .eccube-top-header button {
+  .os-top-header input,
+  .os-top-header select,
+  .os-top-header button {
     font-size: 14px;
     font-size: 0.875rem; }
 
@@ -6185,13 +6185,13 @@ img.product-small {
       color: #007bff; }
 
 /* NAVIGATION */
-.eccube-header-nav a {
+.os-header-nav a {
   padding-left: 6px;
   padding-left: 0.375rem;
   padding-right: 6px;
   padding-right: 0.375rem;
   color: #343a40; }
-  .eccube-header-nav a span {
+  .os-header-nav a span {
     display: none; }
 
 /* HAMBURGER MENU */
@@ -6223,7 +6223,7 @@ img.product-small {
   display: none;
   right: 20px; }
 
-.ec-drawerRole {
+.os-drawerRole {
   position: fixed;
   z-index: 21;
   top: 0;
@@ -6235,7 +6235,7 @@ img.product-small {
   transition: all .3s;
   width: calc(100% - 80px); }
 
-.eccube-overlay {
+.os-overlay {
   height: 100vh;
   width: 100%;
   position: fixed;
@@ -6246,8 +6246,8 @@ img.product-small {
   display: none; }
 
 .have_curtain .hamburger-menu-close,
-.have_curtain .ec-drawerRole,
-.have_curtain .eccube-overlay {
+.have_curtain .os-drawerRole,
+.have_curtain .os-overlay {
   display: block; }
 
 .have_curtain .hamburger-menu-open {
@@ -8397,12 +8397,12 @@ img.product-small {
     max-width: 120px;
   }
 
-  .ec-progress {
+  .os-progress {
     margin-bottom: 30px;
     padding: 0;
   }
 
-  .ec-progress .ec-progress__number {
+  .os-progress .os-progress__number {
     line-height: 42px;
     width: 42px;
     height: 42px;
@@ -8414,7 +8414,7 @@ img.product-small {
     right: 30px;
   }
 
-  .ec-navlistRole .ec-navlistRole__navlist {
+  .os-navlistRole .os-navlistRole__navlist {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
@@ -8423,14 +8423,14 @@ img.product-small {
     position: relative;
   }
 
-  .ec-cartNaviIsset,
-    .ec-cartNaviNull {
+  .os-cartNaviIsset,
+    .os-cartNaviNull {
     margin-top: 0.625rem;
     width: 18.75rem;
   }
 
-  .ec-cartNaviIsset:before,
-      .ec-cartNaviNull:before {
+  .os-cartNaviIsset:before,
+      .os-cartNaviNull:before {
     position: absolute;
     z-index: 1;
     top: -0.5625rem;
@@ -8444,7 +8444,7 @@ img.product-small {
     display: inline-block;
   }
 
-  .eccube-header-nav a span {
+  .os-header-nav a span {
     display: inline-block;
   }
 
@@ -8453,8 +8453,8 @@ img.product-small {
   }
 
   .have_curtain .hamburger-menu-close,
-    .have_curtain .ec-drawerRole,
-    .have_curtain .eccube-overlay {
+    .have_curtain .os-drawerRole,
+    .have_curtain .os-overlay {
     display: none;
   }
 
@@ -10464,22 +10464,22 @@ img.product-small {
     margin-bottom: 10px;
   }
 
-  .mini-cart-wrapper.is-active .ec-cartNaviIsset,
-      .mini-cart-wrapper.is-active .ec-cartNaviNull {
+  .mini-cart-wrapper.is-active .os-cartNaviIsset,
+      .mini-cart-wrapper.is-active .os-cartNaviNull {
     border-top: 1px solid #dee2e6;
     border-bottom: 1px solid #dee2e6;
   }
 
-  .ec-cartNavi {
+  .os-cartNavi {
     background: none;
     border-radius: 0;
   }
 
-  .ec-cartNavi strong {
+  .os-cartNavi strong {
     display: none;
   }
 
-  .eccube-top-header {
+  .os-top-header {
     max-width: 100%;
     font-size: 1.25rem;
   }
