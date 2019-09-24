@@ -1,9 +1,9 @@
 {% if type is defined and type == 'text' %}
-  <h2 class="{{class|default('h6')}}">
+  <h2 class="os-product__name {{class|default('h6')}}">
     {{ product.name }}
   </h2>
 {% else %}
-  <a class="{{class|default('')}}" href="{{ url('product_detail', {id : product.id} ) }}">
+  <a class="os-product__link {{class|default('')}}" href="{{ url('product_detail', {id : product.id} ) }}">
     {{ product.name }}
   </a>
 {% endif %}

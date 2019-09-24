@@ -11,39 +11,11 @@
       {{ tree(ChildCategory) }}
     {% endfor %}
   {% endif %}
-
-  {# {% if Category.children|length > 0 %}
-          <a href="{{ url('product_list') }}?category_id={{ Category.id }}">
-              {{ Category.name }}
-          </a>
-          <div class="card-body" id="child-{{ Category.id }}">
-               {% for ChildCategory in Category.children %}
-                  {% if ChildCategory.children|length > 0 %}
-                      <div class="card">
-                          <div class="card-header" id="headingSubMenu-{{ ChildCategory.id }}">
-                              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSubMenu-{{ ChildCategory.id }}" aria-expanded="true" aria-controls="collapseSubMenu-{{ ChildCategory.id }}">
-                                  {{ ChildCategory.name }}
-                                  <i class="fas fa-minus"></i>
-                              </button>
-                          </div>
-                          <div id="collapseSubMenu-{{ ChildCategory.id }}" class="card-body collapse" aria-labelledby="headingSubMenu-{{ ChildCategory.id }}" data-parent="#child-{{ Category.id }}">
-                              {{ tree(ChildCategory) }}
-                          </div>
-                      </div>
-                  {% else %}
-                      <a href="{{ url('product_list') }}?category_id={{ ChildCategory.id }}">
-                          {{ ChildCategory.name }}
-                      </a>
-                  {% endif %}
-              {% endfor %}
-          </div>
-      {% endif %} #}
 {% endmacro %}
 
-{# @see https://github.com/bolt/bolt/pull/2388 #}
 {% from _self import tree %}
 
-<div id="accordionMenu" class="accordion accordion-menu">
+<div id="accordionMenu" class="accordion accordion-menu os-menu__mobile">
   <div class="menu-heading">
     {{ 'front.block.category.list'|trans }}
   </div>

@@ -1,15 +1,15 @@
-<nav id="os-product-sort" class="navbar navbar-plp {{class|default('')}}">
+<nav id="os-product-sort" class="navbar navbar-plp os-sort {{class|default('')}}">
   {% if pagination.totalItemCount > 0 %}
-    <div class="product-total-count mb-1 mb-sm-0">
+    <div class="product-total-count mb-1 mb-sm-0 os-sort__count">
       {{ 'front.product.search_result__detail'|trans({ '%count%': pagination.totalItemCount })|raw }}
     </div>
   {% else %}
-    <span>{{ 'front.product.search__product_not_found'|trans }}</span>
+    <span class="os-sort__count--notfound">{{ 'front.product.search__product_not_found'|trans }}</span>
   {% endif %}
-  <div class="form-inline form-actions">
+  <div class="form-inline form-actions os-sort__action">
     {% if pagination.totalItemCount > 0 %}
-      {{ form_widget(disp_number_form, {'id': '', 'attr': {'class': 'disp-number ml-sm-3 mb-2 mb-sm-0', 'aria-label': 'Số lượng hiển thị'} }) }}
-      {{ form_widget(order_by_form, {'id': '', 'attr': {'class': 'order-by ml-sm-3', 'aria-label': 'Sắp xếp theo'} }) }}
+      {{ form_widget(disp_number_form, {'id': '', 'attr': {'class': 'disp-number ml-sm-3 mb-2 mb-sm-0 os-sort__action--quantity', 'aria-label': 'Số lượng hiển thị'} }) }}
+      {{ form_widget(order_by_form, {'id': '', 'attr': {'class': 'order-by ml-sm-3 os-sort__action--orderBy', 'aria-label': 'Sắp xếp theo'} }) }}
     {% endif %}
   </div>
 </nav>

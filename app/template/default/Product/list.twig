@@ -99,58 +99,59 @@
         {% include "Components/product/sort.twig" with {'pagination': pagination, 'class': ' p-0 mb-3 border-bottom pb-3'} %}
 
         {% if pagination.totalItemCount > 0 %}
-            <div id="product-list" class="row">
+            <div id="product-list" class="row os-product__list">
                 {% for Product in pagination %}
-                    <div class="product-item col-sm-6 col-md-6 col-lg-3">
+                    <div class="product-item os-product__item col-sm-6 col-md-6 col-lg-3">
                         <div class="card mb-4">
+                          <div class="os-product__item--photo">
                             {# Image #}
                             {% include "Components/product/image.twig" with {'product': Product, 'type': 'link', 'imgClass': 'rounded-top'} %}
+                          </div>
+                          <div class="card-body p-3 position-relative os-product__item--info">
+                              {# Name #}
+                              {% include "Components/product/name.twig" with {'product': Product} %}
+                              
+                              {# Product Description #}
+                              {% include "Components/product/description_list.twig" with {'product': Product, 'truncate': true, 'class': 'bg-info p-2 text-black my-2'} %}
 
-                            <div class="card-body p-3 position-relative">
-                                {# Name #}
-                                {% include "Components/product/name.twig" with {'product': Product} %}
-                                
-                                {# Product Description #}
-                                {% include "Components/product/description_list.twig" with {'product': Product, 'truncate': true, 'class': 'bg-info p-2 text-black my-2'} %}
-
-                                {# Price #}
-                                {% include "Components/product/price.twig" with {'product': Product, type: 'list'} %}
-                                
-                            </div>
-                            <div class="card-footer p-3">
-                                {% if Product.stock_find %}
-                                    {% set form = forms[Product.id] %}
-                                    <form name="form{{ Product.id }}" id="productForm{{ Product.id }}" action="{{ url('product_add_cart', {id:Product.id}) }}" method="post">
-                                        <div class="mb-3">
-                                            {% if form.classcategory_id1 is defined %}
-                                                <div class="product-options mb-2">
-                                                    {{ form_widget(form.classcategory_id1, {'attr': {'class': 'classcategory_id1', 'aria-label': 'Tùy chọn 1'}}) }}
-                                                    {{ form_errors(form.classcategory_id1) }}
-                                                </div>
-                                                {% if form.classcategory_id2 is defined %}
-                                                    <div class="product-options mb-2">
-                                                        {{ form_widget(form.classcategory_id2, {'attr': {'class': 'classcategory_id2', 'aria-label': 'Tùy chọn 2'}}) }}
-                                                        {{ form_errors(form.classcategory_id2) }}
-                                                    </div>
-                                                {% endif %}
-                                            {% endif %}
-                                            <div class="product-quantity">
-                                                {{ form_label(form.quantity, 'common.quantity') }}
-                                                {{ form_widget(form.quantity, {'attr': {'class': 'quantity'}}) }}
-                                                {{ form_errors(form.quantity) }}
-                                            </div>
-                                        </div>
-                                        <button aria-label="{{ 'front.product.add_cart'|trans }}" type="submit" class="btn btn-primary btn-block add-cart" data-cartid="{{ Product.id }}" form="productForm{{ Product.id }}">
-                                            {{ 'front.product.add_cart'|trans }}
-                                        </button>
-                                        {{ form_rest(form) }}
-                                    </form>
-                                {% else %}
-                                    <button type="button" class="btn btn-block btn-secondary" disabled="disabled">
-                                        {{ 'front.product.out_of_stock'|trans }}
-                                    </button>
-                                {% endif %}
-                            </div>
+                              {# Price #}
+                              {% include "Components/product/price.twig" with {'product': Product, type: 'list'} %}
+                              
+                          </div>
+                          <div class="card-footer p-3 os-product__item--actions">
+                              {% if Product.stock_find %}
+                                  {% set form = forms[Product.id] %}
+                                  <form name="form{{ Product.id }}" id="productForm{{ Product.id }}" action="{{ url('product_add_cart', {id:Product.id}) }}" method="post">
+                                      <div class="mb-3">
+                                          {% if form.classcategory_id1 is defined %}
+                                              <div class="product-options mb-2">
+                                                  {{ form_widget(form.classcategory_id1, {'attr': {'class': 'classcategory_id1', 'aria-label': 'Tùy chọn 1'}}) }}
+                                                  {{ form_errors(form.classcategory_id1) }}
+                                              </div>
+                                              {% if form.classcategory_id2 is defined %}
+                                                  <div class="product-options mb-2">
+                                                      {{ form_widget(form.classcategory_id2, {'attr': {'class': 'classcategory_id2', 'aria-label': 'Tùy chọn 2'}}) }}
+                                                      {{ form_errors(form.classcategory_id2) }}
+                                                  </div>
+                                              {% endif %}
+                                          {% endif %}
+                                          <div class="product-quantity">
+                                              {{ form_label(form.quantity, 'common.quantity') }}
+                                              {{ form_widget(form.quantity, {'attr': {'class': 'quantity'}}) }}
+                                              {{ form_errors(form.quantity) }}
+                                          </div>
+                                      </div>
+                                      <button aria-label="{{ 'front.product.add_cart'|trans }}" type="submit" class="btn btn-primary btn-block add-cart" data-cartid="{{ Product.id }}" form="productForm{{ Product.id }}">
+                                          {{ 'front.product.add_cart'|trans }}
+                                      </button>
+                                      {{ form_rest(form) }}
+                                  </form>
+                              {% else %}
+                                  <button type="button" class="btn btn-block btn-secondary os-info--outStock" disabled="disabled">
+                                      {{ 'front.product.out_of_stock'|trans }}
+                                  </button>
+                              {% endif %}
+                          </div>
                         </div>
                     </div>
                 {% endfor %}

@@ -2,13 +2,13 @@
 {% set totalPrice = get_carts_total_price() %}
 {% set totalQuantity = get_carts_total_quantity() %}
 
-<div class="os-cartNavi">
+<div class="os-cartNavi os-header__cart--navi">
   <i class="fa-stack fa-fw fas fa-shopping-cart"></i>
-  <small class="mini-count">{{ totalQuantity|number_format }}</small>
-  <strong>{{ totalPrice|price }}</strong>
+  <small class="mini-count os-header__cart--count">{{ totalQuantity|number_format }}</small>
+  <strong class="os-header__cart--price">{{ totalPrice|price }}</strong>
 </div>
 {% if totalQuantity > 0 %}
-<div class="os-cartNaviIsset os-cartNaviContent">
+<div class="os-cartNaviIsset os-cartNaviContent os-header__cart--content">
   {% for Cart in Carts %}
     {% for CartItem in Cart.CartItems %}
       {% set ProductClass = CartItem.ProductClass %}
@@ -38,8 +38,8 @@
       </div>
     {% endfor %}
   {% endfor %}
-  <div class="mini-actions">
-    <a class="btn btn-primary btn-block" href="{{ url('cart') }}">
+  <div class="mini-actions os-header__cart--actions">
+    <a class="btn btn-primary btn-block os-cartNavi--goCart" href="{{ url('cart') }}">
       {{ 'front.block.cart.go_to_cart'|trans }}
     </a>
     <btn class="os-cartNavi--cancel btn btn-secondary btn-block">

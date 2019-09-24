@@ -1,71 +1,66 @@
 .os-header {
   @extend .mb-3;
-}
 
-.os-top-header {
-  font-size: remCalc(14px);
-
-  @include media-breakpoint-down(sm) {
-    max-width: 100%;
-    font-size: remCalc(20px);
-  }
-
-  input,
-  select,
-  button {
+  &--top {
     font-size: remCalc(14px);
-  }
-}
 
-/* SEARCH */
-.form-search-head {
-  position: relative;
+    @include media-breakpoint-down(sm) {
+      max-width: 100%;
+      font-size: remCalc(20px);
+    }
 
-  select {
-    max-width: 46%;
-  }
-
-  input {
-    max-width: 54%;
-    padding-right: remCalc(30px);
-  }
-
-  button {
-    @include position(absolute, 50% 5px null null, 3);
-    @include size(24px);
-    background: none;
-    border: none;
-    color: $primary;
-    font-size: remCalc(16px);
-    line-height: 24px;
-    margin-top: -12px;
-    padding: 0;
-
-    &:hover,
-    &:focus {
-      background: none;
-      color: $primary;
+    input,
+    select,
+    button {
+      font-size: remCalc(14px);
     }
   }
-}
+  &__nav {
+    a {
+      padding-left: remCalc(6px);
+      padding-right: remCalc(6px);
+      color: $dark; 
+  
+      span {
+        display: none;
+  
+        @include media-breakpoint-up(md) {
+          display: inline-block;
+        }
+      }
+    }
+  }
+  &__search {
+    position: relative;
 
-/* NAVIGATION */
-.os-header-nav {
-  a {
-    padding-left: remCalc(6px);
-    padding-right: remCalc(6px);
-    color: $dark; 
+    select {
+      max-width: 46%;
+    }
 
-    span {
-      display: none;
+    input {
+      max-width: 54%;
+      padding-right: remCalc(30px);
+    }
 
-      @include media-breakpoint-up(md) {
-        display: inline-block;
+    button {
+      @include position(absolute, 50% 5px null null, 3);
+      @include size(24px);
+      background: none;
+      border: none;
+      color: $primary;
+      font-size: remCalc(16px);
+      line-height: 24px;
+      margin-top: -12px;
+      padding: 0;
+
+      &:hover,
+      &:focus {
+        background: none;
+        color: $primary;
       }
     }
   }
 }
-
 /* HAMBURGER MENU */
 .hamburger-menu-open,
 .hamburger-menu-close {

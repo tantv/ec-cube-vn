@@ -1,5 +1,5 @@
 {% form_theme form 'Form/form_div_layout.twig' %}
-<form method="get" class="form-search-head form-inline bg-white p-3 p-md-0 justify-content-center" action="{{ path('product_list') }}">
+<form method="get" class="form-search-head form-inline bg-white p-3 p-md-0 justify-content-center os-header__search" action="{{ path('product_list') }}">
   <div class="input-group w-100">
     {{ form_widget(form.category_id, {'id': null, 'attr': {'aria-label': 'Danh mục'} }) }}
     {{ form_label(form.name, '', { 'label_attr': { 'class': 'd-none' }}) }}

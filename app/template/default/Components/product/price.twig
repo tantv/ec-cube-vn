@@ -1,6 +1,6 @@
 {% if type is defined and type == 'detail' %}
   {# FOR PRODUCT DETAIL #}
-  <div class="wrap-product-price {{class|default('')}}">
+  <div class="wrap-product-price os-price__detail {{class|default('')}}">
     {% if product.hasProductClass -%}
         <del class="product-price price-class-normal">
             {% if product.getPrice01Min is not null and product.getPrice01IncTaxMin == product.getPrice01IncTaxMax %}
@@ -45,7 +45,7 @@
   </div>
 {% elseif type is defined and type == 'list' %}
   {# FOR PRODUCT LIST #}
-  <div class="price02-default product-price {{class|default('')}}">
+  <div class="price02-default product-price os-price--list {{class|default('')}}">
       {% if product.hasProductClass %}
           {% if product.getPrice02Min == product.getPrice02Max %}
               {{ product.getPrice02IncTaxMin|price }}
@@ -58,9 +58,9 @@
   </div>
 {% elseif type is defined and type == 'mini' %}
   {# FOR MINI CART #}
-  <div class="mini-price {{class|default('h6')}}">
-      <span>{{ product.price|price }}</span>
-      <small>{{ 'common.tax_include'|trans }}</small>
+  <div class="mini-price os-price__miniCart {{class|default('h6')}}">
+      <span class="os-price__miniCart--number">{{ product.price|price }}</span>
+      <small class="os-price__miniCart--tax">{{ 'common.tax_include'|trans }}</small>
   </div>
 {% elseif type is defined and type == 'checkout' %}
   {# FOR CHECKOUT AND ORDER HISTORY #}

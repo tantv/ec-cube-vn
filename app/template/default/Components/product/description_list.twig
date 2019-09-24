@@ -1,5 +1,5 @@
 {% if product.description_list %}
-  <div class="product-description description-list {{class|default('')}}">
+  <div class="product-description description-list os-product__description {{class|default('')}}">
     {% if truncate is defined %}
       {{ product.description_list|raw|nl2br|length > 90 ? 
       product.description_list|raw|nl2br|slice(0, 90) ~ '...' : 

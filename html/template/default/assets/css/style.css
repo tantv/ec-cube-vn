@@ -5787,7 +5787,7 @@ img {
   .accordion button.collapsed i:before {
     content: "\f067"; }
 
-.wrap-mega-menu {
+.os-menu__desktop {
   display: none; }
 
 .mega-menu {
@@ -6147,25 +6147,33 @@ img.product-small {
   width: 100vw;
   z-index: 20; }
 
-.os-top-header {
+.os-header--top {
   font-size: 14px;
   font-size: 0.875rem; }
-  .os-top-header input,
-  .os-top-header select,
-  .os-top-header button {
+  .os-header--top input,
+  .os-header--top select,
+  .os-header--top button {
     font-size: 14px;
     font-size: 0.875rem; }
 
-/* SEARCH */
-.form-search-head {
+.os-header__nav a {
+  padding-left: 6px;
+  padding-left: 0.375rem;
+  padding-right: 6px;
+  padding-right: 0.375rem;
+  color: #343a40; }
+  .os-header__nav a span {
+    display: none; }
+
+.os-header__search {
   position: relative; }
-  .form-search-head select {
+  .os-header__search select {
     max-width: 46%; }
-  .form-search-head input {
+  .os-header__search input {
     max-width: 54%;
     padding-right: 30px;
     padding-right: 1.875rem; }
-  .form-search-head button {
+  .os-header__search button {
     position: absolute;
     z-index: 3;
     top: 50%;
@@ -6180,19 +6188,9 @@ img.product-small {
     line-height: 24px;
     margin-top: -12px;
     padding: 0; }
-    .form-search-head button:hover, .form-search-head button:focus {
+    .os-header__search button:hover, .os-header__search button:focus {
       background: none;
       color: #007bff; }
-
-/* NAVIGATION */
-.os-header-nav a {
-  padding-left: 6px;
-  padding-left: 0.375rem;
-  padding-right: 6px;
-  padding-right: 0.375rem;
-  color: #343a40; }
-  .os-header-nav a span {
-    display: none; }
 
 /* HAMBURGER MENU */
 .hamburger-menu-open,
@@ -8389,7 +8387,7 @@ img.product-small {
     text-align: center !important;
   }
 
-  .wrap-mega-menu {
+  .os-menu__desktop {
     display: block;
   }
 
@@ -8444,7 +8442,7 @@ img.product-small {
     display: inline-block;
   }
 
-  .os-header-nav a span {
+  .os-header__nav a span {
     display: inline-block;
   }
 
@@ -10479,7 +10477,7 @@ img.product-small {
     display: none;
   }
 
-  .os-top-header {
+  .os-header--top {
     max-width: 100%;
     font-size: 1.25rem;
   }

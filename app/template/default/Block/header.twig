@@ -1,16 +1,16 @@
-<div class="os-top-header container pt-2 pt-md-0 py-md-4">
+<div class="os-header--top container pt-2 pt-md-0 py-md-4">
   <div class="row">
     <div class="col-md-3 col-lg-4 align-self-center pr-0">
-      <div class="os-header-search d-none d-md-block">
+      <div class="os-header__search d-none d-md-block">
         {{ render(path('block_search_product')) }}
       </div>
       {{ include('Block/nav_sp.twig') }}
     </div>
     <div class="col-auto d-flex justify-content-end align-items-center ml-auto">
-      <div id="os-header-nav" class="os-header-nav">
+      <div id="os-header-nav" class="os-header__nav">
         {{ include('Block/login.twig') }}
       </div>
-      <div id="mini-cart-wrapper" class="mini-cart-wrapper">
+      <div id="mini-cart-wrapper" class="mini-cart-wrapper os-header__cart">
         {{ include('Block/cart.twig') }}
       </div>
     </div>
